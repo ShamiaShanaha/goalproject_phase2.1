@@ -4,6 +4,12 @@ services:
     build: ./backend
     volumes: 
       - logs:/app/logs
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+    
+
 
 
   client:
